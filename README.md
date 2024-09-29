@@ -38,29 +38,37 @@ Natural Language Processing (NLP) adalah cabang dari kecerdasan buatan (AI) yang
 ## Penjelasan Kode
 
 1. `import nltk`
+   
    Kode ini mengimpor modul NLTK (Natural Language Toolkit), yang merupakan pustaka Python untuk pemrosesan bahasa alami (NLP). Modul ini menyediakan berbagai alat seperti tokenisasi, stemming, dan lainnya yang berguna untuk analisis teks.
 
 2. `nltk.download('punkt_tab')`
+   
    Bagian ini digunakan untuk mendownload dataset Punkt, yang merupakan salah satu tokenizer berbasis statistik yang dibutuhkan untuk melakukan tokenisasi kalimat dan kata di bahasa tertentu.
 
 3. `import string`
+   
    Untuk mengimpor modul string dari pustaka standar Python. Modul ini menyediakan beberapa fungsi dan konstanta yang berhubungan dengan manipulasi teks, seperti daftar semua huruf alfabet dan tanda baca.
 
 4. `def pemisah_kata(kalimat):`
+   
    Merupakan definisi fungsi bernama `pemisah_kata` yang menerima satu parameter yaitu kalimat. Fungsi ini akan memproses kalimat untuk menghasilkan daftar kata bersih dan menghitung jumlah kata.
 
 5. `kalimat = kalimat.lower()`
+   
    Kode ini mengubah seluruh kalimat menjadi huruf kecil agar kata-kata dapat di-tokenisasi dengan lebih konsisten (misalnya, "Universitas" dan "universitas" dianggap sama).
 
 6. `kata = nltk.word_tokenize(kalimat)`
+   
    Kode ini melakukan tokenisasi kata menggunakan fungsi `word_tokenize()` dari NLTK, yang memecah kalimat menjadi unit-unit kata individu (berdasarkan spasi dan tanda baca).
 
 7. `kata_bersih = [word for word in kata if word.isalnum()]`
+   
    Merupakan list comprehension yang berfungsi untuk membuat daftar baru `kata_bersih`, yang berisi hanya kata-kata yang merupakan alphanumeric (mengandung huruf atau angka saja). Metode `isalnum()` digunakan untuk memeriksa apakah karakter dalam string adalah alphanumeric (tanpa tanda baca).
    
 8. `jumlah_kata = len(kata_bersih)`
+   
    Untuk menghitung jumlah kata yang tersisa setelah menghilangkan tanda baca dengan menggunakan fungsi `len()` untuk menghitung panjang dari daftar `kata_bersih`.
 
 ## Hasil
 
-![Gambar 1](1.png)
+![Gambar 1](1-1.png)
